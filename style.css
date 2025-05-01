@@ -1,0 +1,130 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes starTwinkle {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes playerGlow {
+    0% { filter: drop-shadow(0 0 5px #00ff00); }
+    50% { filter: drop-shadow(0 0 15px #00ff00); }
+    100% { filter: drop-shadow(0 0 5px #00ff00); }
+}
+
+@keyframes levelUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes scorePop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+.star {
+    animation: starTwinkle 1s infinite;
+}
+
+.player {
+    animation: playerGlow 2s infinite;
+}
+
+.level-up {
+    animation: levelUp 0.5s ease-out;
+}
+
+.score-pop {
+    animation: scorePop 0.3s ease-out;
+}
+
+/* Фоновые частицы */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Градиентный фон */
+body {
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Стилизация кнопок */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+button:hover::after {
+    width: 200%;
+    height: 200%;
+}
+
+/* Стилизация меню */
+#menu {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Стилизация достижений */
+.achievement {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.achievement:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-icon {
+    transition: transform 0.3s;
+}
+
+.achievement:hover .achievement-icon {
+    transform: rotate(360deg);
+} 

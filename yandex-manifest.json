@@ -1,0 +1,41 @@
+{
+    "name": "Star Catcher",
+    "description": "Увлекательная игра, где вам предстоит собирать звезды и избегать комет!",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "background": "#000000",
+    "projectType": "GameCanvas",
+    "bundleVersion": "1.0",
+    "locales": ["ru"],
+    "defaultLocale": "ru",
+    "icon": "icon.png",
+    "splash": "splash.png",
+    "categories": ["arcade"],
+    "achievements": {
+        "firstStar": {
+            "name": "Первая звезда",
+            "description": "Соберите свою первую звезду",
+            "icon": "achievements/first-star.png"
+        },
+        "starCollector": {
+            "name": "Собиратель звёзд",
+            "description": "Соберите 100 звёзд",
+            "icon": "achievements/star-collector.png"
+        },
+        "speedster": {
+            "name": "Спидстер",
+            "description": "Достигните 5 уровня",
+            "icon": "achievements/speedster.png"
+        },
+        "master": {
+            "name": "Мастер",
+            "description": "Наберите 1000 очков",
+            "icon": "achievements/master.png"
+        },
+        "perfect": {
+            "name": "Идеальный улов",
+            "description": "Поймайте 20 звёзд подряд, не пропустив ни одной",
+            "icon": "achievements/perfect.png"
+        }
+    }
+} 
